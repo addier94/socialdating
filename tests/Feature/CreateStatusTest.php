@@ -16,8 +16,6 @@ class CreateStatusTest extends TestCase
     {
         $response = $this->post(route('statuses.store'), ['body' => 'Mi primer status']);
 
-        dd($response->content());
-
         $response->assertRedirect('login');
     }
 
